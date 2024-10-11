@@ -1,0 +1,85 @@
+.Navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 10%;
+    position: fixed;
+   width: 80vw;
+    top: 0;
+    
+    z-index: 2;
+}
+html{
+    scroll-behavior: smooths;
+    transition: 2s;
+  }
+.window-scroll{
+    background:  #2e3267;
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+}
+.Links{
+    display: flex;
+    gap: 35px;
+    justify-content:flex-start;
+    align-items: flNavigationex-start;
+}
+.Links li{
+    list-style: none;
+   
+}
+.Links li a{
+    text-decoration: none;
+    color: white;
+   
+}
+.Links a:hover{
+    color: #555;
+}
+.Navigation h2{
+    font-size: 20px;
+    color: white;
+}
+.Navigation span{
+    display: none;
+}
+@media screen and (max-width:700px){
+    .Links{
+        display: flex;
+      
+        flex-direction: column;
+        background-color: rgba(0, 0, 255, 0.274);
+        right: -270px;
+        position: fixed;
+        top: 0;
+        width: 200px;
+        z-index: 2;
+        transition: 1s;
+        backdrop-filter:blur(10px) ;
+        margin: 10px;
+        border-radius: 20px;
+        padding: 22px;
+        animation: animateItem  1s linear forwards;
+
+    }
+  
+   
+    @keyframes animateItem {
+         0%{
+            transform:rotateZ(-90)
+         }
+         100%{
+            transform:rotateZ(0)
+         }
+    }
+    .Navigation span{
+        display: block;
+        color: #fff;
+        font-size: 30px;
+        background:linear-gradient(45deg, blue, red);
+        padding: 5px;
+        border-radius: 5px;
+        width: 30px;
+        text-align: center;
+    }
+   
+}
